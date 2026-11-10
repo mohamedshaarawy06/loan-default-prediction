@@ -1,0 +1,24 @@
+# Python 3.13
+# Versions are pinned to match the environment used to train catboost_model.pkl.
+# Changing scikit-learn / imbalanced-learn / catboost versions may break loading the saved model.
+
+# --- Core ---
+numpy==2.5.3
+pandas==3.0.5
+joblib==1.6.0
+
+# --- Modeling ---
+scikit-learn==1.9.1
+imbalanced-learn==0.14.2
+catboost==1.2.10
+xgboost==3.4.1
+lightgbm==4.7.0
+optuna==5.0.0
+
+# --- Visualization & EDA ---
+plotly==7.0.0
+nbformat==5.11.1
+datasist==1.5.3
+
+# --- App ---
+streamlit==1.66.1
