@@ -135,7 +135,7 @@ Adding `loan_to_income` raised F1 from 84.25 to 84.68, but most of that gain com
 ```
 .
 ├── loan-default-prediction.ipynb   # Full workflow: cleaning, EDA, modeling, evaluation
-├── loan.py                         # Streamlit web app
+├── app.py                          # Streamlit web app
 ├── catboost_model.pkl              # Trained pipeline (preprocessing + CatBoost)
 ├── credit_risk_dataset.csv         # Raw dataset
 ├── credit_risk_clean.csv           # Cleaned dataset (used by the app)
@@ -168,12 +168,12 @@ pip install -r requirements.txt
 
 ### 3. Run the app
 ```bash
-streamlit run loan.py
+streamlit run app.py
 ```
 Then open `http://localhost:8501` in your browser.
 
 ### 4. Reproduce the analysis
-Open `loan-default-prediction.ipynb` and run all cells. It recreates `credit_risk_clean.csv`, `catboost_model.pkl` and `loan.py` (about an hour, because of the tuning).
+Open `loan-default-prediction.ipynb` and run all cells. It recreates `credit_risk_clean.csv`, `catboost_model.pkl` and `app.py` (about an hour, because of the tuning).
 
 > The charts are interactive Plotly charts, so GitHub may not render them. Open the notebook locally to see them.
 
