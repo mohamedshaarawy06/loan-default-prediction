@@ -8,6 +8,8 @@ Predicting whether a borrower will **fail to repay a loan** from borrower and lo
 ![Optuna](https://img.shields.io/badge/Optuna-Tuning-4B8BBE)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)
 
+**🔗 Live App:** [Try it here](https://shaarawy-loan-default-prediction.streamlit.app/)
+
 > Built with a banking background in mind: I spent 3 years as a Settlement Officer & Transactions Analyst at Suez Canal Bank, so the analysis focuses on what a credit team actually cares about: catching risky borrowers without rejecting good ones.
 
 ---
