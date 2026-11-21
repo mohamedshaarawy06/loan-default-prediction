@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 220 48">
+  <rect x="2" y="4" width="40" height="40" rx="10" fill="#0B2545"/>
+  <path d="M9 20 q6 -6 13 0 t13 0" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M9 29 q6 -6 13 0 t13 0" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="52" y="32" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0B2545">NILE</text>
+  <text x="112" y="32" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#C9A227">BANK</text>
+</svg>
