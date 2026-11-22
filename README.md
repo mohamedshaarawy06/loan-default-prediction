@@ -1,6 +1,6 @@
 # 🏦 Loan Default Prediction — Credit Risk
 
-Predicting whether a borrower will **fail to repay a loan** from borrower and loan details, with a tuned **CatBoost** classification pipeline served through an interactive **Streamlit** app.
+Predicting whether a borrower will **fail to repay a loan** from borrower and loan details, with a tuned **CatBoost** classification pipeline served through **Nile Bank**, a 3-page **Streamlit** website for a demo bank.
 
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.9-F7931E?logo=scikitlearn&logoColor=white)
@@ -137,7 +137,13 @@ Adding `loan_to_income` raised F1 from 84.25 to 84.68, but most of that gain com
 ```
 .
 ├── loan-default-prediction.ipynb   # Full workflow: cleaning, EDA, modeling, evaluation
-├── app.py                          # Streamlit web app
+├── app.py                          # Streamlit app: style and top menu
+├── pages/
+│   ├── home.py                     # Home page
+│   ├── loan_check.py               # Prediction page
+│   └── insights.py                 # EDA findings and model scores
+├── images/                         # Page images and logo
+├── .streamlit/config.toml          # App colors
 ├── catboost_model.pkl              # Trained pipeline (preprocessing + CatBoost)
 ├── credit_risk_dataset.csv         # Raw dataset
 ├── credit_risk_clean.csv           # Cleaned dataset (used by the app)
@@ -175,16 +181,21 @@ streamlit run app.py
 Then open `http://localhost:8501` in your browser.
 
 ### 4. Reproduce the analysis
-Open `loan-default-prediction.ipynb` and run all cells. It recreates `credit_risk_clean.csv`, `catboost_model.pkl` and `app.py` (about an hour, because of the tuning).
+Open `loan-default-prediction.ipynb` and run all cells. It recreates `credit_risk_clean.csv`, `catboost_model.pkl`, `app.py` and the 3 page files (about an hour, because of the tuning).
 
 > The charts are interactive Plotly charts, so GitHub may not render them. Open the notebook locally to see them.
 
 ---
 
-## 🖥️ The App
+## 🖥️ The App: Nile Bank
 
-- Enter borrower details (age, income, employment, home ownership, credit history, previous default) and loan details (amount, intent, grade, interest rate).
-- Shows the live **loan-to-income** ratio, then predicts whether the borrower will repay, with the **probability of repayment**.
+A website for a demo bank called **Nile Bank** (not a real bank), with 3 pages:
+
+- **Home**: the bank name, key numbers and how the website works.
+- **Loan Check**: enter borrower details (age, income, employment, home ownership, credit history, previous default) and loan details (amount, intent, grade, interest rate). It shows the live **loan-to-income** ratio, then predicts whether the borrower will repay, with the **chance of repayment** on a gauge.
+- **Insights**: the main EDA findings as charts, and the model scores.
+
+Other details:
 - Rejects impossible inputs, such as employment length or credit history that does not fit the borrower's age, or a loan far too large for the income.
 - It gives **no advice on how to get approved**. I tested that feature and removed it, because similar real borrowers repaid less than the model predicted: the model shows correlation, not cause.
 
