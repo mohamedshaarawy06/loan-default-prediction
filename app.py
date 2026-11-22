@@ -18,6 +18,10 @@ h1, h2, h3, .hero h1, .card-value, .step-num {font-family: 'Poppins', sans-serif
 [data-testid="stTopNavLink"] * {font-size: 18px !important; font-weight: 600 !important;}
 [data-testid="stTopNavLink"]:hover {background: #E3E8F0;}
 
+/* Same menu on phones (it moves to the side panel) */
+[data-testid="stSidebarNavLink"] {padding: 10px 14px;}
+[data-testid="stSidebarNavLink"] * {font-size: 18px !important; font-weight: 600 !important;}
+
 /* Animations */
 @keyframes fadeUp {
     from {opacity: 0; transform: translateY(25px);}
@@ -34,6 +38,7 @@ h1, h2, h3, .hero h1, .card-value, .step-num {font-family: 'Poppins', sans-serif
     background-position: center;
     border-radius: 18px;
     padding: 80px 50px;
+    overflow: hidden;
     color: white;
     animation: fadeUp 0.8s ease-out;
 }
@@ -42,7 +47,7 @@ h1, h2, h3, .hero h1, .card-value, .step-num {font-family: 'Poppins', sans-serif
 /* Big "NILE BANK" name: shows first, then the rest of the text */
 @keyframes zoomIn {
     from {opacity: 0; transform: scale(0.6); letter-spacing: 30px;}
-    to {opacity: 1; transform: scale(1); letter-spacing: 6px;}
+    to {opacity: 1; transform: scale(1);}
 }
 .brand {
     font-family: 'Poppins', sans-serif;
@@ -162,6 +167,23 @@ h1, h2, h3, .hero h1, .card-value, .step-num {font-family: 'Poppins', sans-serif
     transition: transform 0.2s;
 }
 .stButton button:hover {transform: scale(1.03);}
+
+/* Smaller numbers on tablets so words do not break */
+@media (max-width: 1000px) {
+    .card-value {font-size: 26px; white-space: nowrap;}
+    .card {padding: 22px 10px;}
+}
+
+/* Smaller sizes on phones */
+@media (max-width: 640px) {
+    .hero {padding: 36px 22px !important;}
+    .brand {font-size: 42px; letter-spacing: 3px; margin-bottom: 14px;}
+    .hero h1 {font-size: 28px;}
+    .hero p {font-size: 15px;}
+    .section-title {font-size: 23px; margin-top: 28px;}
+    .card {padding: 18px 14px;}
+    .card-value {font-size: 28px;}
+}
 
 .footer {
     text-align: center;
